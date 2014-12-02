@@ -17,10 +17,10 @@ $sitename = $app->getCfg('sitename');
 
 
 
-<div class="navbar navbar-inverse navbar_agricar">
+<div class="navbar navbar-inverse navbar_57n">
     <div class="navbar-inner">
         <div class="container">
-            <a href="<?php echo JURI::base(); ?>" title="<?php echo $sitename; ?> - Home" class="mobile_logo"><img src="templates/ssofb.co.uk_agricar/images/agricar_mobile_logo.png" alt="<?php echo $sitename; ?> - Logo" /></a>
+            <a href="<?php echo JURI::base(); ?>" title="<?php echo $sitename; ?> - Home" class="mobile_logo"><img src="templates/ssofb.co.uk_57n/images/57n_mobile_logo.png" alt="<?php echo $sitename; ?> - Logo" /></a>
             <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>

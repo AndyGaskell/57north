@@ -1,7 +1,6 @@
 <?php
 /**
- * @package     Joomla.Site
- * @subpackage  Templates.protostar
+ * 57 North
  *
  * @copyright   Copyright (C) 2005 - 2014 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
@@ -25,15 +24,6 @@ $task     = $app->input->getCmd('task', '');
 $itemid   = $app->input->getCmd('Itemid', '');
 $sitename = $app->getCfg('sitename');
 
-if($task == "edit" || $layout == "form" )
-{
-	$fullWidth = 1;
-}
-else
-{
-	$fullWidth = 0;
-}
-
 // Add JavaScript Frameworks
 JHtml::_('bootstrap.framework');
 $doc->addScript('templates/' .$this->template. '/js/template.js');
@@ -48,15 +38,9 @@ JHtml::_('bootstrap.loadCss', false, $this->direction);
 $user = JFactory::getUser();
 
 // Adjusting content width
-if ($this->countModules('left') && $this->countModules('right')){
-	# got left and right
-    $span = "span5";
-}elseif ($this->countModules('left') && !$this->countModules('right')){
-	# got left, not right
+if ( $this->countModules('right') ){
+	# got right
     $span = "span9";
-}elseif (!$this->countModules('left') && $this->countModules('right')){
-    # got right, not left
-	$span = "span8";
 }else{
 	$span = "span12";
 }
@@ -130,7 +114,7 @@ unset($doc->_scripts[JURI::root(true) . '/media/system/js/mootools-core.js']);
         </div>
 	</div>
         
-	<div class="header_wide_yellow"> </div>    
+
         
         
     <?php # main white portion ?>
@@ -197,19 +181,6 @@ unset($doc->_scripts[JURI::root(true) . '/media/system/js/mootools-core.js']);
                     
         <div class="row-fluid">
         
-            <?php 
-            if ($this->countModules('left')) {
-            # Begin left 
-            ?>
-            <div class="span3">
-                <div class="left">
-                    <jdoc:include type="modules" name="left" style="plain" />
-                </div>
-            </div>
-            <?php 
-            # End left 
-            } 
-            ?>
             
             <main id="content" role="main" class="<?php echo $span;?>">
                 <div class="main_body">
@@ -288,41 +259,8 @@ unset($doc->_scripts[JURI::root(true) . '/media/system/js/mootools-core.js']);
 
 
         
-        <?php
-        /*
-        bottom_22422 modules, modules in a row
-        */            
-        # do we have any bottom_22422 modules?
-        ;
-        if ( 
-        $this->countModules('bottom_22422_1') OR 
-        $this->countModules('bottom_22422_2') OR 
-        $this->countModules('bottom_22422_3') OR 
-        $this->countModules('bottom_22422_4') OR 
-        $this->countModules('bottom_22422_5') 
-        ) {
-            ?>
-            <div class="row-fluid bottom_bottom_22422">
-		        <div class="span2 bottom_22422_1">
-			        <jdoc:include type="modules" name="bottom_22422_1" style="blue_white" />                 
-		        </div>        
-		        <div class="span2 bottom_22422_2">
-			        <jdoc:include type="modules" name="bottom_22422_2" style="blue_white" />                 
-		        </div>   
-		        <div class="span4 bottom_22422_3">
-			        <jdoc:include type="modules" name="bottom_22422_3" style="blue_white" />                 
-		        </div>   
-		        <div class="span2 bottom_22422_4">
-			        <jdoc:include type="modules" name="bottom_22422_4" style="blue_white" />                 
-		        </div>   
-		        <div class="span2 bottom_22422_5">
-			        <jdoc:include type="modules" name="bottom_22422_5" style="blue_white" />                 
-		        </div>                    
-            </div>
-            <?php                      
-        } 
-        ?>              
-        
+
+
         
         <?php
         /*
@@ -340,12 +278,7 @@ unset($doc->_scripts[JURI::root(true) . '/media/system/js/mootools-core.js']);
 
 	
 
-	<?php # Footer ?>
-	<div class="footer_toplink_wide">
-	    <div class="container">
-	        <a class="top_link" title="Back to the top" href="#top">TOP</a>        	
-        </div>
-    </div>    
+
 	
 	<?php # Footer ?>
 	<div class="footer_wide">
@@ -365,8 +298,8 @@ unset($doc->_scripts[JURI::root(true) . '/media/system/js/mootools-core.js']);
 			        <jdoc:include type="modules" name="footer_4" />  
                     <div class="copyright_footer">&copy; <?php echo $sitename; ?> <?php echo date('Y'); ?></div>
                     <div class="credit_footer">
-                        <a href="http://www.designbyoomph.com/" title="Design By Oomph. Creative graphic design and advertising agency based in Forfar, Dundee, Aberdeen, Scotland" target="_blank">Website design by designbyoomph.com</a><br/>
-                        <a href="http://www.pukkadigital.com/" title="Website by Pukka Digital. Design for print, web and advertising based in Forfar, Dundee, Aberdeen, Scotland" target="_blank">Website developed and built by pukkadigital.com</a>
+
+
                     </div>
                 </div>                                
             </div>    
