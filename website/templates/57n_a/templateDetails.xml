@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
+<extension version="3.1" type="template" client="site">
+	<name>57_n</name>
+	<version>1.0</version>
+	<creationDate>2/12/2014</creationDate>
+	<author>Andy Gaskell for 57 North</author>
+	<authorEmail>ag@ssofb.co.uk</authorEmail>
+	<copyright>Copyright (C) 2013 SSOFB Ltd. All rights reserved.</copyright>
+	<description>Custom Joomla 3 template for 57north. Programming by Andy Gaskell.</description>
+	<files>
+		<filename>component.php</filename>
+		<filename>error.php</filename>
+		<filename>favicon.ico</filename>
+		<filename>index.php</filename>
+		<filename>templateDetails.xml</filename>
+		<filename>template_preview.png</filename>
+		<filename>template_thumbnail.png</filename>
+		<folder>css</folder>
+		<folder>html</folder>
+		<folder>images</folder>
+		<folder>img</folder>
+		<folder>js</folder>
+		<folder>language</folder>
+	</files>
+	<positions>
+	    <position>header_left</position>
+	    <position>header_right</position>
+		<position>menu</position>
+		<position>top_wide</position>
+		<position>top_auto</position>
+		<position>right</position>
+		<position>above_content</position>
+		<position>below_content</position>
+		<position>bottom_wide</position>
+		<position>bottom_auto</position>		
+		<position>footer_left</position>
+		<position>footer_right</position>		
+		<position>footer_wide</position>		
+		<position>debug</position>	
+	</positions>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.tpl_57_n.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">           
+               
+			</fieldset>                
+		</fields>
+	</config>
+</extension>
